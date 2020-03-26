@@ -10,14 +10,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class SimulationGUI extends JFrame implements ActionListener {
-	//private Simulation s;
+//	private Simulation s;
 
 
 	//Fenster bauen
 	private BackgroundPanel panel;
 	private JButton btnNewButton;
 	public SimulationGUI() {
-		//Simulation s = new Simulation();
+//		Simulation s = new Simulation();
 		
 		getContentPane().setLayout(null);
 		
