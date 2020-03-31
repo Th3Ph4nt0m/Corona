@@ -45,7 +45,7 @@ package de.th3ph4nt0m.corona;
             AnzahlKontakte = 0;
         }
 
-        /**
+        /*
          * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen      *
          *
          * @param y ein Beispielparameter für eine Methode
@@ -58,16 +58,16 @@ package de.th3ph4nt0m.corona;
         }
 
         public String KontakanzahlBestimmen() {
-            if (SchulenGeschlossen = false && Ausgangssperre = false && Kontaktverbot = false && GrenzenGeschlossen = false) {
+            if (SchulenGeschlossen == false && Ausgangssperre == false && Kontaktverbot == false && GrenzenGeschlossen == false) {
                 AnzahlKontakte = 100;
             } else {
-                if (SchulenGeschlossen = true && Ausgangssperre = false && Kontaktverbot = false && GrenzenGeschlossen = false) {
+                if (SchulenGeschlossen == true && Ausgangssperre == false && Kontaktverbot == false && GrenzenGeschlossen == false) {
                     AnzahlKontakte = 60;
                 } else {
-                    if (SchulenGeschlossen = true && Ausgangssperre = false && Kontaktverbot = true && GrenzenGeschlossen = false) {
+                    if (SchulenGeschlossen == true && Ausgangssperre == false && Kontaktverbot == true && GrenzenGeschlossen == false) {
                         AnzahlKontakte = 15;
                     } else {
-                        if (SchulenGeschlossen = true && Ausgangssperre = false && Kontaktverbot = true && GrenzenGeschlossen = true) {
+                        if (SchulenGeschlossen == true && Ausgangssperre == false && Kontaktverbot == true && GrenzenGeschlossen == true) {
                             AnzahlKontakte = 13;
                         } else {
                             AnzahlKontakte = 100;
@@ -75,9 +75,11 @@ package de.th3ph4nt0m.corona;
                     }
                 }
             }
-            if (SchulenGeschlossen = true && Ausgangssperre = true && Kontaktverbot = true && GrenzenGeschlossen = true) {
+            if (SchulenGeschlossen == true && Ausgangssperre == true && Kontaktverbot == true && GrenzenGeschlossen == true) {
                 AnzahlKontakte = 4;
             }
+            //TODO add return statement
+            return null;
         }
 
         public void ausgangssperreErlassen() {
