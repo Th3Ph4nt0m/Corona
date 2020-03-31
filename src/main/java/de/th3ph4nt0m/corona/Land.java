@@ -1,7 +1,5 @@
 package de.th3ph4nt0m.corona;
 
-public class Land {
-
     //Parameter
     //Einwohner (infiziert, gesund, verstorben, wieder gesund)
     //Maßnahmen
@@ -13,103 +11,128 @@ public class Land {
     //getAnsteckungswahrscheinlichkeit()
     //genesen()
 
-    private String name;
-    private int einwohnerzahl;
-    private int erkrankte;
-    private int bevölkerungsdichte;
-    private boolean schulenGeschlossen;
-    private boolean kontaktverbot;
-    private boolean ausgangssperre;
-    private int genesene;
-    private int beatmungsgeräte;
-    private boolean grenzenGeschlossen;
-
     /**
-     * Konstruktor für Objekte der Klasse Land
+     * Beschreiben Sie hier die Klasse Land.
+     * * @author (Ihr Name)   * @version (eine Versionsnummer oder ein Datum)
      */
-    public Land(String Name, int Einwohnerzahl, int Erkrankte, int Bevölkerungsdichte, boolean SchulenGeschlossen,
-                boolean Kontaktverbot, boolean Ausgangssperre, int Genesene, int Beatmungsgeräte, boolean GrenzenGeschlossen) {
-        name = Name;
-        einwohnerzahl = Einwohnerzahl;
-        erkrankte = Erkrankte;
-        bevölkerungsdichte = Bevölkerungsdichte;
-        schulenGeschlossen = SchulenGeschlossen;
-        kontaktverbot = Kontaktverbot;
-        ausgangssperre = Ausgangssperre;
-        genesene = Genesene;
-        beatmungsgeräte = Beatmungsgeräte;
-        grenzenGeschlossen = GrenzenGeschlossen;
-    }
+    public class Land {     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+        private String Name;
+        private int Ansteckungswahrscheinlichkeit;//in Prozent
+        private int Einwohnerzahl;
+        private int Erkrankte;
+        private int Genesene;
+        private boolean SchulenGeschlossen;
+        private boolean Ausgangssperre;
+        private boolean Kontaktverbot;
+        private boolean GrenzenGeschlossen;
+        private int Beatmungsplätze;
+        private int AnzahlKontakte;
 
-    /*
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     *
-     * @param y ein Beispielparameter für eine Methode
-     * @return die Summe aus x und y
-     */
-    public void Schulenschließen() {
-        if (schulenGeschlossen = false) {
-            schulenGeschlossen = true;
+        /**
+         * Konstruktor für Objekte der Klasse Land
+         */
+        public Land(String name, int einwohnerzahl, int erkrankte, int genesene, boolean schulenGeschlossen, boolean ausgangssperre, boolean kontaktverbot, boolean grenzengeschlossen, int beatmungsplätze) {         // Instanzvariable initialisieren
+            Name = name;
+            Einwohnerzahl = einwohnerzahl;
+            Erkrankte = erkrankte;
+            Genesene = genesene;
+            SchulenGeschlossen = schulenGeschlossen;
+            Ausgangssperre = ausgangssperre;
+            Kontaktverbot = kontaktverbot;
+            GrenzenGeschlossen = grenzengeschlossen;
+            Beatmungsplätze = beatmungsplätze;
+            Ansteckungswahrscheinlichkeit = 10;
+            AnzahlKontakte = 0;
+        }
+
+        /**
+         * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen      *
+         *
+         * @param y ein Beispielparameter für eine Methode
+         * @return die Summe aus x und y
+         */
+        public void schulenSchließen() {
+            if (SchulenGeschlossen = false) {
+                SchulenGeschlossen = true;
+            }
+        }
+
+        public String KontakanzahlBestimmen() {
+            if (SchulenGeschlossen = false && Ausgangssperre = false && Kontaktverbot = false && GrenzenGeschlossen = false) {
+                AnzahlKontakte = 100;
+            } else {
+                if (SchulenGeschlossen = true && Ausgangssperre = false && Kontaktverbot = false && GrenzenGeschlossen = false) {
+                    AnzahlKontakte = 60;
+                } else {
+                    if (SchulenGeschlossen = true && Ausgangssperre = false && Kontaktverbot = true && GrenzenGeschlossen = false) {
+                        AnzahlKontakte = 15;
+                    } else {
+                        if (SchulenGeschlossen = true && Ausgangssperre = false && Kontaktverbot = true && GrenzenGeschlossen = true) {
+                            AnzahlKontakte = 13;
+                        } else {
+                            AnzahlKontakte = 100;
+                        }
+                    }
+                }
+            }
+            if (SchulenGeschlossen = true && Ausgangssperre = true && Kontaktverbot = true && GrenzenGeschlossen = true) {
+                AnzahlKontakte = 4;
+            }
+        }
+
+        public void ausgangssperreErlassen() {
+
+            if (Ausgangssperre = false) {
+                Ausgangssperre = true;
+            }
+        }
+
+        public void kontaktverbotErlassen() {
+            if (Kontaktverbot = false) {
+                Kontaktverbot = true;
+            }
+        }
+
+        public void grenzenSchließen() {
+            if (GrenzenGeschlossen = false) {
+                GrenzenGeschlossen = true;
+            }
+        }
+
+        public String getName() {
+            return Name;
+        }
+
+        public int getEinwohnerzahl() {
+            return Einwohnerzahl;
+        }
+
+        public int getErkrankte() {
+            return Erkrankte;
+        }
+
+        public int getGenesene() {
+            return Genesene;
+        }
+
+        public boolean getSchulenGeschlossen() {
+            return SchulenGeschlossen;
+        }
+
+        public boolean getAusgangssperre() {
+            return Ausgangssperre;
+        }
+
+        public boolean getKontaktverbot() {
+            return Kontaktverbot;
+        }
+
+        public boolean getGrenzenGeschlossen() {
+            return GrenzenGeschlossen;
+        }
+
+        public int getBeatmungsplätze() {
+            return Beatmungsplätze;
         }
     }
-
-    public void AusgangssperreErlassen() {
-        if (ausgangssperre = false) {
-            ausgangssperre = true;
-        }
-    }
-
-    public void KontaktverbotErlassen() {
-        if (kontaktverbot = false) {
-            kontaktverbot = true;
-        }
-    }
-
-    public void GrenzenSchließen() {
-        if (grenzenGeschlossen = false) {
-            grenzenGeschlossen = true;
-        }
-    }
-
-    public String GetName() {
-        return name;
-    }
-
-    public int GetEinwohnerzahl() {
-        return einwohnerzahl;
-    }
-
-    public int GetErkrankte() {
-        return erkrankte;
-    }
-
-    public int GetBevölkerungsdichte() {
-        return bevölkerungsdichte;
-    }
-
-    public boolean GetSchulenGeschlossen() {
-        return schulenGeschlossen;
-    }
-
-    public boolean GetKontaktverbot() {
-        return kontaktverbot;
-    }
-
-    public boolean GetAusgangssperre() {
-        return ausgangssperre;
-    }
-
-    public int GetGenesene() {
-        return genesene;
-    }
-
-    public int GetBeatmungsgeräte() {
-        return beatmungsgeräte;
-    }
-
-    public boolean GetGrenzensgeschlossen() {
-        return grenzenGeschlossen;
-    }
-
-
 }
