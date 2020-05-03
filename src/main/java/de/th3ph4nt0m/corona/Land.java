@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2020 Henrik Steffens aka Th3Ph4nt0m
+ *
+ * Land.java is part of the Corona
+ * Last edit: 2020.5.3
+ */
+
 package de.th3ph4nt0m.corona;
 
 //Parameter

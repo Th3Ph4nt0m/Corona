@@ -1,8 +1,14 @@
+/*
+ * Copyright (c) 2020 Henrik Steffens aka Th3Ph4nt0m
+ *
+ * BackgroundPanel.java is part of the Corona
+ * Last edit: 2020.5.3
+ */
+
 package de.th3ph4nt0m.corona;
 
-import java.awt.*;
-import java.awt.image.*;
 import javax.swing.*;
+import java.awt.*;
 
 /*
  *  Support custom painting on a panel in the form of
