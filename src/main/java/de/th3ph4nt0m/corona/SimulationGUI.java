@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Henrik Steffens aka Th3Ph4nt0m
  *
  * SimulationGUI.java is part of the Corona
- * Last edit: 2020.5.3
+ * Last edit: 2020.5.28
  */
 
 package de.th3ph4nt0m.corona;
@@ -25,7 +25,6 @@ public class SimulationGUI extends JFrame implements ActionListener {
 
 	public SimulationGUI() {
 //		Simulation s = new Simulation();
-
 		getContentPane().setLayout(null);
 
 		btnNewButton = new JButton("Runde simulieren");
@@ -90,9 +89,7 @@ public class SimulationGUI extends JFrame implements ActionListener {
 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		SimulationGUI s = new SimulationGUI();
-
 	}
 
 	//Reaktion auf Events
